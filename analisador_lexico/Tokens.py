@@ -18,13 +18,10 @@ class Tokens(Enum):
     PARENTESES_ESQUERDO = 12
     PARENTESES_DIREITO  = 13    
 
-    def __init__(self) -> None:
-        super().__init__()
-
-    def is_delimitador(self, delimitador : str) -> bool:
+    def is_delimitador(delimitador : str) -> bool:
         return (
-            delimitador == self.VIRGULA or
-            delimitador == self.PONTO_VIRGULA
+            delimitador == Tokens.VIRGULA or
+            delimitador == Tokens.PONTO_VIRGULA
         )
 
 
